@@ -9,18 +9,18 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navigation
-import com.digimart.presentation.sales.ui.AddItemsToCart
-import com.digimart.presentation.sales.ui.AddItemsToCartEvent
-import com.digimart.presentation.sales.ui.AllSales
-import com.digimart.presentation.sales.ui.AllSalesEvent
-import com.digimart.presentation.sales.ui.Cart
-import com.digimart.presentation.sales.ui.CartEvent
-import com.digimart.presentation.sales.ui.SingleSale
-import com.digimart.presentation.sales.ui.SingleSaleEvent
-import com.digimart.presentation.sales.viewmodel.AddItemsToCartVM
-import com.digimart.presentation.sales.viewmodel.AllSalesVM
-import com.digimart.presentation.sales.viewmodel.CartScreenVM
-import com.digimart.presentation.sales.viewmodel.SingleSaleVM
+import com.digimart.sales.ui.AddItemsToCart
+import com.digimart.sales.ui.AddItemsToCartEvent
+import com.digimart.sales.ui.AllSales
+import com.digimart.sales.ui.AllSalesEvent
+import com.digimart.sales.ui.Cart
+import com.digimart.sales.ui.CartEvent
+import com.digimart.sales.ui.SingleSale
+import com.digimart.sales.ui.SingleSaleEvent
+import com.digimart.sales.viewmodel.AddItemsToCartVM
+import com.digimart.sales.viewmodel.AllSalesVM
+import com.digimart.sales.viewmodel.CartScreenVM
+import com.digimart.sales.viewmodel.SingleSaleVM
 
 fun NavGraphBuilder.salesNavGraph(navHostController: NavHostController) {
     navigation(
@@ -49,7 +49,6 @@ fun NavGraphBuilder.salesNavGraph(navHostController: NavHostController) {
             arguments = listOf(
                 navArgument("saleId") {
                     type = NavType.LongType
-                    defaultValue = -1L
                 }
             )
         ) {

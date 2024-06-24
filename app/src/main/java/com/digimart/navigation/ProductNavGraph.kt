@@ -10,12 +10,12 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navigation
-import com.digimart.presentation.product.ui.AddEditProduct
-import com.digimart.presentation.product.ui.AddEditProductEvent
-import com.digimart.presentation.product.ui.AllProductEvent
-import com.digimart.presentation.product.ui.AllProduct
-import com.digimart.presentation.product.viewmodel.AddProductVM
-import com.digimart.presentation.product.viewmodel.AllProductsVM
+import com.digimart.product.ui.AddEditProduct
+import com.digimart.product.ui.AddEditProductEvent
+import com.digimart.product.ui.AllProductEvent
+import com.digimart.product.ui.AllProduct
+import com.digimart.product.viewmodel.AddProductVM
+import com.digimart.product.viewmodel.AllProductsVM
 
 fun NavGraphBuilder.productNavGraph(navHostController: NavHostController) {
     navigation(
@@ -45,7 +45,7 @@ fun NavGraphBuilder.productNavGraph(navHostController: NavHostController) {
             arguments = listOf(
                 navArgument("productId") {
                     type = NavType.LongType
-                    nullable = true
+                    defaultValue = -1L
                 }
             )
         ) {
@@ -56,7 +56,7 @@ fun NavGraphBuilder.productNavGraph(navHostController: NavHostController) {
             val singleProductUiState by addProductVM.singleProductUiState.collectAsStateWithLifecycle()
 
             AddEditProduct(
-                productId = it.arguments?.getLong("productId"),
+                productId = it.arguments?.getLong("productId") ?: -1L,
                 singleProductUiState = singleProductUiState,
                 addProductUiState = addProductUiState,
                 onUiEvent = { event ->

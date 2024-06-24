@@ -46,6 +46,7 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SheetState
@@ -236,6 +237,7 @@ fun TextFieldCustom(
     text: String,
     onTextChange: (String) -> Unit,
     showTrailingIcon: Boolean = true,
+    isReadOnly: Boolean = false,
     trailingIcon: @Composable () -> Unit = {},
     hint: String = "",
     keyboardType: KeyboardType = KeyboardType.Text,
@@ -247,6 +249,7 @@ fun TextFieldCustom(
         value = text,
         onValueChange = onTextChange,
         shape = RoundedCornerShape(8.dp),
+        readOnly = isReadOnly,
         placeholder = {
             Text(
                 text = hint,
@@ -290,17 +293,28 @@ fun CustomExposedDropDownMenu(
         expanded = isExpanded,
         onExpandedChange = onExpandedChange
     ) {
-        TextFieldCustom(
-            hint = hint,
-            text = selected,
-            modifier = Modifier.onGloballyPositioned {
-                textFieldSize = it.size.toSize()
+        TextField(
+            modifier = Modifier
+                .fillMaxWidth()
+                .wrapContentHeight().onGloballyPositioned {
+                    textFieldSize = it.size.toSize()
+                },
+            value = selected,
+            onValueChange = {},
+            shape = RoundedCornerShape(8.dp),
+            readOnly = true,
+            placeholder = {
+                Text(
+                    text = hint,
+                    color = Color(0xFFAEAEB2)
+                )
             },
-            showTrailingIcon = true,
             trailingIcon = {
                 ExposedDropdownMenuDefaults.TrailingIcon(expanded = isExpanded)
             },
-            onTextChange = { }
+            textStyle = TextStyle(
+                color = Color_Blue
+            )
         )
         DropdownMenu(
             expanded = isExpanded,
@@ -642,7 +656,7 @@ fun BottomBarProductsTotal(
                         Icon(
                             imageVector = it,
                             contentDescription = "Button Symbol",
-                            tint = Color_White,
+                            tint = if(useAddProduct) LocalContentColor.current else Color_White,
                             modifier = Modifier.size(18.dp)
                         )
                     }

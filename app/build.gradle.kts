@@ -70,6 +70,7 @@ dependencies {
     implementation(libs.google.gson)
 
     implementation(libs.androidx.material.icons.extended)
+    implementation(libs.google.truth)
 
     //Dagger
     implementation(libs.dagger.hilt.android)

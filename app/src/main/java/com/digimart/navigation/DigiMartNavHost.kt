@@ -5,8 +5,8 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.digimart.presentation.ui.Home
-import com.digimart.presentation.ui.HomeEvent
+import com.digimart.ui.Home
+import com.digimart.ui.HomeEvent
 
 enum class Route {
     HOME,

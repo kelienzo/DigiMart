@@ -14,6 +14,7 @@ kotlinxCoroutines = "1.7.3"
 roomVersion = "2.6.1"
 kspVersion = "1.9.20-1.0.14"
 gsonVersion = "2.10.1"
+googleTruthTest = "1.1.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -42,6 +43,7 @@ androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = 
 androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomVersion" }
 androidx-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended" }
 google-gson = { group = "com.google.code.gson", name = "gson", version.ref = "gsonVersion" }
+google-truth = { group = "com.google.truth", name = "truth", version.ref = "googleTruthTest" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
