@@ -28,10 +28,12 @@ sale.
 * Clone the repository git clone https://github.com/kelienzo/DigiMart.git
 * Open the project in android studio
 * Configure if any errors and allow to build
+* Run the app
 
 ## Architecture Flow
 
 * Data The data source, contains the database, Dao and Entity classes
+  Each package holds related features
   *Product Package*,
   *Sales Package*,
   *Inventory Package*
@@ -42,7 +44,7 @@ sale.
 
 ## Technologies
 
-* Kotlin: The programming language used.
+* Kotlin: The programming language used (Google's preferred language for Android app development).
 * MVVM: Cleanly separate an application's business and presentation logic from its user interface (
   UI)
 * Jetpack Compose: Android’s recommended modern toolkit for building native UI.
