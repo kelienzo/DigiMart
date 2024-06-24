@@ -1,10 +1,10 @@
-package com.digimart.sales.viewmodel
+package com.digimart.sales.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.digimart.data.local.entities.CartItem
 import com.digimart.product.usecase.ProductUseCase
-import com.digimart.sales.ui.AddItemsToCartEvent
+import com.digimart.sales.presentation.ui.AddItemsToCartEvent
 import com.digimart.sales.usecase.CartItemUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi

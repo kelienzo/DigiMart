@@ -1,4 +1,4 @@
-package com.digimart.sales.ui
+package com.digimart.sales.presentation.ui
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image

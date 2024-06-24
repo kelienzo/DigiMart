@@ -1,4 +1,4 @@
-package com.digimart.sales.ui
+package com.digimart.sales.presentation.ui
 
 import android.widget.Toast
 import androidx.activity.compose.BackHandler

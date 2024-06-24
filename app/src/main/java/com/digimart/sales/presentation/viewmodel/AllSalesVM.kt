@@ -1,9 +1,9 @@
-package com.digimart.sales.viewmodel
+package com.digimart.sales.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.digimart.data.local.entities.Sales
-import com.digimart.sales.ui.AllSalesEvent
+import com.digimart.sales.presentation.ui.AllSalesEvent
 import com.digimart.sales.usecase.SalesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi

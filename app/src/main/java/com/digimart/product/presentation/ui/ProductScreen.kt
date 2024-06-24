@@ -1,4 +1,4 @@
-package com.digimart.product.ui
+package com.digimart.product.presentation.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable

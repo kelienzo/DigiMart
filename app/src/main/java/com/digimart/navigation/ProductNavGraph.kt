@@ -10,12 +10,12 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navigation
-import com.digimart.product.ui.AddEditProduct
-import com.digimart.product.ui.AddEditProductEvent
-import com.digimart.product.ui.AllProductEvent
-import com.digimart.product.ui.AllProduct
-import com.digimart.product.viewmodel.AddProductVM
-import com.digimart.product.viewmodel.AllProductsVM
+import com.digimart.product.presentation.ui.AddEditProduct
+import com.digimart.product.presentation.ui.AddEditProductEvent
+import com.digimart.product.presentation.ui.AllProductEvent
+import com.digimart.product.presentation.ui.AllProduct
+import com.digimart.product.presentation.viewmodel.AddProductVM
+import com.digimart.product.presentation.viewmodel.AllProductsVM
 
 fun NavGraphBuilder.productNavGraph(navHostController: NavHostController) {
     navigation(

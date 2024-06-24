@@ -1,4 +1,4 @@
-package com.digimart.product.ui
+package com.digimart.product.presentation.ui
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -93,6 +93,10 @@ fun AddEditProduct(
                 .verticalScroll(rememberScrollState())
         ) {
 
+            Text(text = "Product Name")
+
+            SpacerHeightWidth(10)
+
             TextFieldCustom(
                 text = productName,
                 onTextChange = { productName = it },
@@ -114,6 +118,10 @@ fun AddEditProduct(
 //                }
 //            )
 
+            Text(text = "Select Category")
+
+            SpacerHeightWidth(10)
+
             FlowRow(
                 horizontalArrangement = Arrangement.spacedBy(10.dp),
                 verticalArrangement = Arrangement.Center
@@ -132,6 +140,10 @@ fun AddEditProduct(
 
             SpacerHeightWidth(20)
 
+            Text(text = "Product Price")
+
+            SpacerHeightWidth(10)
+
             TextFieldCustom(
                 text = productPrice,
                 onTextChange = { productPrice = it },
@@ -140,6 +152,10 @@ fun AddEditProduct(
             )
 
             SpacerHeightWidth(20)
+
+            Text(text = "Product Quantity")
+
+            SpacerHeightWidth(10)
 
             TextFieldCustom(
                 text = productQuantity,

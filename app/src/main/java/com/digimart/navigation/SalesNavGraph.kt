@@ -9,18 +9,18 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navigation
-import com.digimart.sales.ui.AddItemsToCart
-import com.digimart.sales.ui.AddItemsToCartEvent
-import com.digimart.sales.ui.AllSales
-import com.digimart.sales.ui.AllSalesEvent
-import com.digimart.sales.ui.Cart
-import com.digimart.sales.ui.CartEvent
-import com.digimart.sales.ui.SingleSale
-import com.digimart.sales.ui.SingleSaleEvent
-import com.digimart.sales.viewmodel.AddItemsToCartVM
-import com.digimart.sales.viewmodel.AllSalesVM
-import com.digimart.sales.viewmodel.CartScreenVM
-import com.digimart.sales.viewmodel.SingleSaleVM
+import com.digimart.sales.presentation.ui.AddItemsToCart
+import com.digimart.sales.presentation.ui.AddItemsToCartEvent
+import com.digimart.sales.presentation.ui.AllSales
+import com.digimart.sales.presentation.ui.AllSalesEvent
+import com.digimart.sales.presentation.ui.Cart
+import com.digimart.sales.presentation.ui.CartEvent
+import com.digimart.sales.presentation.ui.SingleSale
+import com.digimart.sales.presentation.ui.SingleSaleEvent
+import com.digimart.sales.presentation.viewmodel.AddItemsToCartVM
+import com.digimart.sales.presentation.viewmodel.AllSalesVM
+import com.digimart.sales.presentation.viewmodel.CartScreenVM
+import com.digimart.sales.presentation.viewmodel.SingleSaleVM
 
 fun NavGraphBuilder.salesNavGraph(navHostController: NavHostController) {
     navigation(

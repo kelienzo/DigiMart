@@ -1,4 +1,4 @@
-package com.digimart.sales.ui
+package com.digimart.sales.presentation.ui
 
 import android.util.Log
 import androidx.compose.foundation.Image

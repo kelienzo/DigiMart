@@ -1,9 +1,9 @@
-package com.digimart.product.viewmodel
+package com.digimart.product.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.digimart.data.local.entities.Product
-import com.digimart.product.ui.AddEditProductEvent
+import com.digimart.product.presentation.ui.AddEditProductEvent
 import com.digimart.product.usecase.ProductUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
